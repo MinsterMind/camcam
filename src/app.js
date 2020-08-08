@@ -1,8 +1,8 @@
 const { App } = require('@slack/bolt');
 
 const app = new App({
-    signingSecret: process.env.SLACK_SIGNING_SECRET ,
-    token: process.env.SLACK_BOT_TOKEN ,
+    signingSecret: process.env.SLACK_SIGNING_SECRET || 'dfb0bf44067ee7f4d9c71a8edb6ec892',
+    token: process.env.SLACK_BOT_TOKEN || 'xoxb-287357138481-1288083193573-X6VpuYHqPRptcAPFnkqCBWcb'
 });
 
 /* Add functionality here */
@@ -18,13 +18,36 @@ const app = new App({
     console.log('exception ' + e)
 });
 
+// app.event("app_about_opened", async ({ payload, context }) => {
+//     const userId = payload.user;
+//     console.log(userId)
+//     try {
+//         // Call the views.publish method using the built-in WebClient
+//         await app.client.views.publish({
+//             // The token you used to initialize your app is stored in the `context` object
+//             token: context.botToken,
+//             user_id: userId,
+//             view: {
+//                 // Home tabs must be enabled in your app configuration page under "App Home"
+//                 "type": "about",
+//                 "blocks": [
+//                     {
+//                         "type": "divider"
+//                     }
+//                 ]
+//             }
+//         })
+//     }
+//     catch (error) {
+//         console.error(error);
+//     }
+// });
 
 // Listen to the app_home_opened Events API event to hear when a user opens your app from the sidebar
 app.event("app_home_opened", async ({ payload, context }) => {
     const userId = payload.user;
     console.log(userId)
     try {
-        // Call the views.publish method using the built-in WebClient
         await app.client.views.publish({
             // The token you used to initialize your app is stored in the `context` object
             token: context.botToken,
@@ -37,72 +60,33 @@ app.event("app_home_opened", async ({ payload, context }) => {
                         "type": "section",
                         "text": {
                             "type": "mrkdwn",
-                            "text": "Hey there 👋 I'm Symbl.AI Bot. I'm here to help you identify action items, follow-ups, topics in Slack.\n"
+                            "text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
                         }
                     },
                     {
-                        "type": "section",
+                        "type": "header",
                         "text": {
-                            "type": "mrkdwn",
-                            "text": "*1️⃣ Look by insight type `/symbl` command*. Type `/symbl list <action-items|follow-ups|topics>` to retrieve insights for that day"
+                            "type": "plain_text",
+                            "text": "AI-Powered Conversational Experience"
                         }
-                    },
-                    {
-                        "type": "section",
-                        "text": {
-                            "type": "mrkdwn",
-                            "text": "*2️⃣ Look by Date  `/symbl` command*. Type `/symbl <date in mm/dd/yy format>` "
-                        }
-                    },
-                    {
-                        "type": "section",
-                        "text": {
-                            "type": "mrkdwn",
-                            "text": "*3️⃣ Look by Assignee  `/symbl` command*. Type `/symbl assignee <assignee_name>` "
-                        }
+
                     },
                     {
                         "type": "image",
                         "title": {
                             "type": "plain_text",
-                            "text": "image1",
+                            "text": "Symbl",
                             "emoji": true
                         },
-                        "image_url": "https://api.slack.com/img/blocks/bkb_template_images/onboardingComplex.jpg",
-                        "alt_text": "image1"
+                        "image_url": "https://symbltestdata.s3.us-east-2.amazonaws.com/rammer.png",
+                        "alt_text": "Symbl"
                     },
+
                     {
                         "type": "section",
                         "text": {
                             "type": "mrkdwn",
-                            "text": "➕ To start tracking your team's insights, *add me to a channel* and I'll introduce myself. I'm usually added to a team or project channel. Type `/invite @Symbl` from the channel or pick a channel on the right."
-                        },
-                        "accessory": {
-                            "type": "conversations_select",
-                            "placeholder": {
-                                "type": "plain_text",
-                                "text": "Select a channel...",
-                                "emoji": true
-                            }
-                        }
-                    },
-                    {
-                        "type": "divider"
-                    },
-                    {
-                        "type": "context",
-                        "elements": [
-                            {
-                                "type": "mrkdwn",
-                                "text": "👀 View all options with `/symbl list options`\n❓Get help at any time with `/symbl help` or type *help* in a DM with me"
-                            }
-                        ]
-                    },
-                    {
-                        "type": "section",
-                        "text": {
-                            "type": "mrkdwn",
-                            "text": ":mag: Search results for *Cata*"
+                            "text": "\n\n :arrow_down: *Select Catalogue which suits your communication style*"
                         }
                     },
                     {
@@ -161,7 +145,7 @@ app.event("app_home_opened", async ({ payload, context }) => {
                         "type": "section",
                         "text": {
                             "type": "mrkdwn",
-                            "text": "*<fakeLink.toYourApp.com|Insights sharing Catalogue>*\nChose the way you want to receive Insights from CamCam"
+                            "text": "*<fakeLink.toYourApp.com|Insights sharing Catalogue>*\nChose the way you want to receive Insights from CamCam\n\n"
                         },
                         "accessory": {
                             "type": "static_select",
@@ -199,37 +183,44 @@ app.event("app_home_opened", async ({ payload, context }) => {
                         }
                     },
                     {
+                        "type": "section",
+                        "text": {
+                            "type": "mrkdwn",
+                            "text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                        }
+                    },
+                    {
+                        "type": "section",
+                        "text": {
+                            "type": "mrkdwn",
+                            "text": "\n\n :speech_balloon: *Select slack channel to invite symbl*"
+                        }
+                    },
+                    {
                         "type": "divider"
                     },
                     {
-                        "type": "actions",
-                        "elements": [
-                            {
-                                "type": "button",
-                                "text": {
-                                    "type": "plain_text",
-                                    "emoji": true,
-                                    "text": "Next 5 Results"
-                                },
-                                "value": "click_me_123"
+                        "type": "section",
+                        "text": {
+                            "type": "mrkdwn",
+                            "text": "\n\n➕ To start tracking your team's insights, *add me to a channel* and I'll introduce myself. I'm usually added to a team or project channel. Type `/invite @Symbl` from the channel or pick a channel on the right.\n\n"
+                        },
+                        "accessory": {
+                            "type": "conversations_select",
+                            "placeholder": {
+                                "type": "plain_text",
+                                "text": "Select a channel...",
+                                "emoji": true
                             }
-                        ]
+                        }
+                    },
+                    {
+                        "type": "divider"
                     }
                 ]
             }
-
-
-
         });
 
-         const results = await app.client.users.list({
-             token: context.botToken,
-             scope: 'channels:read'
-         })
-
-        await app.client
-
-         console.log(results);
     }
     catch (error) {
         console.error(error);
