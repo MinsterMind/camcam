@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="be8a750d-3556-4c5d-903b-41fdd05db20c" name="Default Changelist" comment="" />
+    <list default="true" id="be8a750d-3556-4c5d-903b-41fdd05db20c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/services/messageService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/slackApp.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/symbl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/todoList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/axios/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="camcam" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -16,6 +29,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
   </component>
   <component name="ProjectId" id="1fo82wFqi2eJx9qdmuvitZzuAQd" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -30,14 +50,23 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Node.js.app.js">
     <configuration name="app.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/app.js" working-dir="$PROJECT_DIR$/src">
+      <method v="2" />
+    </configuration>
+    <configuration name="slackApp.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/services/slackApp.js" working-dir="$PROJECT_DIR$/src/services">
+      <method v="2" />
+    </configuration>
+    <configuration name="symbl.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/services/symbl.js" working-dir="$PROJECT_DIR$/src/services">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Node.js.app.js" />
+        <item itemvalue="Node.js.slackApp.js" />
+        <item itemvalue="Node.js.symbl.js" />
       </list>
     </recent_temporary>
   </component>
@@ -63,7 +92,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1596872882321</updated>
-      <workItem from="1596872886585" duration="4242000" />
+      <workItem from="1596872886585" duration="54221000" />
     </task>
     <servers />
   </component>
@@ -71,79 +100,279 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1398" height="303" key="GridCell.Tab.0.bottom" timestamp="1596881906293">
+    <state x="609" y="160" width="451" height="579" key="#xdebugger.evaluate" timestamp="1596982100874">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="303" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1596881906293" />
-    <state width="1398" height="303" key="GridCell.Tab.0.center" timestamp="1596881906288">
+    <state x="609" y="160" width="451" height="579" key="#xdebugger.evaluate/0.0.1440.900@0.0.1440.900" timestamp="1596982100874" />
+    <state width="1398" height="262" key="GridCell.Tab.0.bottom" timestamp="1597011232085">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="303" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1596881906288" />
-    <state width="1398" height="303" key="GridCell.Tab.0.left" timestamp="1596881906284">
+    <state width="1398" height="262" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1597011232085" />
+    <state width="1398" height="303" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1596957109439" />
+    <state width="1398" height="262" key="GridCell.Tab.0.center" timestamp="1597011232077">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="303" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1596881906284" />
-    <state width="1398" height="303" key="GridCell.Tab.0.right" timestamp="1596881906290">
+    <state width="1398" height="262" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1597011232077" />
+    <state width="1398" height="303" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1596957109428" />
+    <state width="1398" height="262" key="GridCell.Tab.0.left" timestamp="1597011232071">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="303" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1596881906290" />
-    <state width="1398" height="303" key="GridCell.Tab.1.bottom" timestamp="1596881906303">
+    <state width="1398" height="262" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1597011232071" />
+    <state width="1398" height="303" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1596957109392" />
+    <state width="1398" height="262" key="GridCell.Tab.0.right" timestamp="1597011232081">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="303" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1596881906303" />
-    <state width="1398" height="303" key="GridCell.Tab.1.center" timestamp="1596881906298">
+    <state width="1398" height="262" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1597011232081" />
+    <state width="1398" height="303" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1596957109434" />
+    <state width="1398" height="262" key="GridCell.Tab.1.bottom" timestamp="1597011231871">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="303" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1596881906298" />
-    <state width="1398" height="303" key="GridCell.Tab.1.left" timestamp="1596881906296">
+    <state width="1398" height="262" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1597011231871" />
+    <state width="1398" height="262" key="GridCell.Tab.1.bottom/0.23.1440.877@0.23.1440.877" timestamp="1597010451664" />
+    <state width="1398" height="262" key="GridCell.Tab.1.center" timestamp="1597011231866">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="303" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1596881906296" />
-    <state width="1398" height="303" key="GridCell.Tab.1.right" timestamp="1596881906301">
+    <state width="1398" height="262" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1597011231866" />
+    <state width="1398" height="262" key="GridCell.Tab.1.center/0.23.1440.877@0.23.1440.877" timestamp="1597010451659" />
+    <state width="1398" height="262" key="GridCell.Tab.1.left" timestamp="1597011231863">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="303" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1596881906301" />
-    <state width="1398" height="303" key="GridCell.Tab.2.bottom" timestamp="1596881906319">
+    <state width="1398" height="262" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1597011231863" />
+    <state width="1398" height="262" key="GridCell.Tab.1.left/0.23.1440.877@0.23.1440.877" timestamp="1597010451657" />
+    <state width="1398" height="262" key="GridCell.Tab.1.right" timestamp="1597011231868">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="303" key="GridCell.Tab.2.bottom/0.0.1440.900@0.0.1440.900" timestamp="1596881906319" />
-    <state width="1398" height="303" key="GridCell.Tab.2.center" timestamp="1596881906313">
+    <state width="1398" height="262" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1597011231868" />
+    <state width="1398" height="262" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1597010451661" />
+    <state width="1398" height="262" key="GridCell.Tab.2.bottom" timestamp="1597011231882">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="303" key="GridCell.Tab.2.center/0.0.1440.900@0.0.1440.900" timestamp="1596881906313" />
-    <state width="1398" height="303" key="GridCell.Tab.2.left" timestamp="1596881906306">
+    <state width="1398" height="262" key="GridCell.Tab.2.bottom/0.0.1440.900@0.0.1440.900" timestamp="1597011231882" />
+    <state width="1398" height="262" key="GridCell.Tab.2.center" timestamp="1597011231876">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="303" key="GridCell.Tab.2.left/0.0.1440.900@0.0.1440.900" timestamp="1596881906306" />
-    <state width="1398" height="303" key="GridCell.Tab.2.right" timestamp="1596881906316">
+    <state width="1398" height="262" key="GridCell.Tab.2.center/0.0.1440.900@0.0.1440.900" timestamp="1597011231876" />
+    <state width="1398" height="262" key="GridCell.Tab.2.left" timestamp="1597011231874">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="303" key="GridCell.Tab.2.right/0.0.1440.900@0.0.1440.900" timestamp="1596881906316" />
-    <state width="1398" height="303" key="GridCell.Tab.3.bottom" timestamp="1596881906329">
+    <state width="1398" height="262" key="GridCell.Tab.2.left/0.0.1440.900@0.0.1440.900" timestamp="1597011231874" />
+    <state width="1398" height="262" key="GridCell.Tab.2.right" timestamp="1597011231879">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="303" key="GridCell.Tab.3.bottom/0.0.1440.900@0.0.1440.900" timestamp="1596881906329" />
-    <state width="1398" height="303" key="GridCell.Tab.3.center" timestamp="1596881906324">
+    <state width="1398" height="262" key="GridCell.Tab.2.right/0.0.1440.900@0.0.1440.900" timestamp="1597011231879" />
+    <state width="1398" height="262" key="GridCell.Tab.3.bottom" timestamp="1597011231892">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="303" key="GridCell.Tab.3.center/0.0.1440.900@0.0.1440.900" timestamp="1596881906324" />
-    <state width="1398" height="303" key="GridCell.Tab.3.left" timestamp="1596881906322">
+    <state width="1398" height="262" key="GridCell.Tab.3.bottom/0.0.1440.900@0.0.1440.900" timestamp="1597011231892" />
+    <state width="1398" height="262" key="GridCell.Tab.3.center" timestamp="1597011231887">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="303" key="GridCell.Tab.3.left/0.0.1440.900@0.0.1440.900" timestamp="1596881906322" />
-    <state width="1398" height="303" key="GridCell.Tab.3.right" timestamp="1596881906327">
+    <state width="1398" height="262" key="GridCell.Tab.3.center/0.0.1440.900@0.0.1440.900" timestamp="1597011231887" />
+    <state width="1398" height="262" key="GridCell.Tab.3.left" timestamp="1597011231884">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="303" key="GridCell.Tab.3.right/0.0.1440.900@0.0.1440.900" timestamp="1596881906327" />
+    <state width="1398" height="262" key="GridCell.Tab.3.left/0.0.1440.900@0.0.1440.900" timestamp="1597011231884" />
+    <state width="1398" height="262" key="GridCell.Tab.3.right" timestamp="1597011231890">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="262" key="GridCell.Tab.3.right/0.0.1440.900@0.0.1440.900" timestamp="1597011231890" />
+    <state width="720" height="450" key="XDebugger.FullValuePopup" timestamp="1596982099870">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="720" height="450" key="XDebugger.FullValuePopup/0.0.1440.900@0.0.1440.900" timestamp="1596982099870" />
+    <state x="100" y="100" width="1240" height="700" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1596884604601">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="100" y="100" width="1240" height="700" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1440.877@0.23.1440.877" timestamp="1596884604601" />
+    <state x="100" y="100" width="1240" height="700" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog" timestamp="1596884604604">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="100" y="100" width="1240" height="700" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog/0.23.1440.877@0.23.1440.877" timestamp="1596884604604" />
+    <state x="265" y="193" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1597010457653">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="265" y="193" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1440.900@0.0.1440.900" timestamp="1597010457653" />
+    <state x="385" y="196" key="search.everywhere.popup" timestamp="1596959138926">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="196" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1596959138926" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/app.js</url>
-          <line>231</line>
+          <url>file://$PROJECT_DIR$/src/services/symbl.js</url>
+          <line>46</line>
           <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="1" />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/services/symbl.js</url>
+          <line>20</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/services/symbl.js</url>
+          <line>40</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app.js</url>
+          <line>99</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app.js</url>
+          <line>103</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app.js</url>
+          <line>107</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app.js</url>
+          <line>111</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/services/slackApp.js</url>
+          <line>92</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/services/slackApp.js</url>
+          <line>94</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app.js</url>
+          <line>141</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app.js</url>
+          <line>401</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app.js</url>
+          <line>322</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app.js</url>
+          <line>181</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app.js</url>
+          <line>178</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app.js</url>
+          <line>115</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app.js</url>
+          <line>193</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app.js</url>
+          <line>187</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app.js</url>
+          <line>177</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app.js</url>
+          <line>412</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app.js</url>
+          <line>415</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app.js</url>
+          <line>425</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app.js</url>
+          <line>334</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app.js</url>
+          <line>120</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app.js</url>
+          <line>248</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app.js</url>
+          <line>251</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/services/slackApp.js</url>
+          <line>10</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app.js</url>
+          <line>275</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app.js</url>
+          <line>420</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app.js</url>
+          <line>348</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="52" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
