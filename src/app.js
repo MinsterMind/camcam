@@ -4,6 +4,7 @@ const todoList = require('./services/todoList')
 const symbl = require('./services/symbl')
 const _ = require('lodash')
 const fs = require('fs')
+const btoa = require('btoa')
 
 const credentials = {
     signingSecret: process.env.SLACK_SIGNING_SECRET || 'da96901e4dd2135fab13d62618476af4',
@@ -42,12 +43,10 @@ const conversationIdDetails = {};
 });
 
 
-// Listen to the app_home_opened Events API event to hear when a user opens your app from the sidebar
 app.event("app_home_opened", async ({ payload, context }) => {
     const userId = payload.user;
     console.log(userId)
     try {
-        // Call the views.publish method using the built-in WebClient
         await app.client.views.publish({
             // The token you used to initialize your app is stored in the `context` object
             token: context.botToken,
@@ -60,36 +59,167 @@ app.event("app_home_opened", async ({ payload, context }) => {
                         "type": "section",
                         "text": {
                             "type": "mrkdwn",
-                            "text": "Hey there 👋 I'm Symbl.AI Bot. I'm here to help you identify action items, follow-ups, topics in Slack.\n"
+                            "text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
                         }
                     },
                     {
                         "type": "header",
                         "text": {
+                            "type": "plain_text",
+                            "text": "AI-Powered Conversational Experience"
+                        }
+
+                    },
+                    {
+                        "type": "image",
+                        "title": {
+                            "type": "plain_text",
+                            "text": "Symbl",
+                            "emoji": true
+                        },
+                        "image_url": "https://symbltestdata.s3.us-east-2.amazonaws.com/rammer.png",
+                        "alt_text": "Symbl"
+                    },
+
+                    {
+                        "type": "section",
+                        "text": {
                             "type": "mrkdwn",
-                            "text": "Learn how home tabs can be more useful and interactive <https://api.slack.com/surfaces/tabs/using|*in the documentation*>."
+                            "text": "\n\n :arrow_down: *Select Catalogue which suits your communication style*"
                         }
                     },
                     {
                         "type": "divider"
                     },
                     {
-                        "type": "context",
-                        "elements": [
-                            {
-                                "type": "mrkdwn",
-                                "text": "Psssst this home tab was designed using <https://api.slack.com/tools/block-kit-builder|*Block Kit Builder*>"
+                        "type": "section",
+                        "text": {
+                            "type": "mrkdwn",
+                            "text": "*<fakeLink.toYourApp.com|Use Case Catalogue>*\nUse Case Catalogue for the following departments/roles..."
+                        },
+                        "accessory": {
+                            "type": "static_select",
+                            "placeholder": {
+                                "type": "plain_text",
+                                "emoji": true,
+                                "text": "Select"
+                            },
+                            "options": [
+                                {
+                                    "text": {
+                                        "type": "plain_text",
+                                        "emoji": true,
+                                        "text": "Customer support"
+                                    },
+                                    "value": "value-0"
+                                },
+                                {
+                                    "text": {
+                                        "type": "plain_text",
+                                        "emoji": true,
+                                        "text": "Sales and Marketing"
+                                    },
+                                    "value": "value-1"
+                                },
+                                {
+                                    "text": {
+                                        "type": "plain_text",
+                                        "emoji": true,
+                                        "text": "Tech discussions"
+                                    },
+                                    "value": "value-2"
+                                },
+                                {
+                                    "text": {
+                                        "type": "plain_text",
+                                        "emoji": true,
+                                        "text": "Default"
+                                    },
+                                    "value": "value-3"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "section",
+                        "text": {
+                            "type": "mrkdwn",
+                            "text": "*<fakeLink.toYourApp.com|Insights sharing Catalogue>*\nChose the way you want to receive Insights from CamCam\n\n"
+                        },
+                        "accessory": {
+                            "type": "static_select",
+                            "placeholder": {
+                                "type": "plain_text",
+                                "emoji": true,
+                                "text": "Select"
+                            },
+                            "options": [
+                                {
+                                    "text": {
+                                        "type": "plain_text",
+                                        "emoji": true,
+                                        "text": "Daily"
+                                    },
+                                    "value": "value-0"
+                                },
+                                {
+                                    "text": {
+                                        "type": "plain_text",
+                                        "emoji": true,
+                                        "text": "Hourly"
+                                    },
+                                    "value": "value-1"
+                                },
+                                {
+                                    "text": {
+                                        "type": "plain_text",
+                                        "emoji": true,
+                                        "text": "Custom"
+                                    },
+                                    "value": "value-2"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "section",
+                        "text": {
+                            "type": "mrkdwn",
+                            "text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                        }
+                    },
+                    {
+                        "type": "section",
+                        "text": {
+                            "type": "mrkdwn",
+                            "text": "\n\n :speech_balloon: *Select slack channel to invite symbl*"
+                        }
+                    },
+                    {
+                        "type": "divider"
+                    },
+                    {
+                        "type": "section",
+                        "text": {
+                            "type": "mrkdwn",
+                            "text": "\n\n➕ To start tracking your team's insights, *add me to a channel* and I'll introduce myself. I'm usually added to a team or project channel. Type `/invite @Symbl` from the channel or pick a channel on the right.\n\n"
+                        },
+                        "accessory": {
+                            "type": "conversations_select",
+                            "placeholder": {
+                                "type": "plain_text",
+                                "text": "Select a channel...",
+                                "emoji": true
                             }
-                        ]
+                        }
+                    },
+                    {
+                        "type": "divider"
                     }
                 ]
             }
-
-
-
         });
 
-         // await messageService.sendMessage(app,context.botToken, userId, "Hello")
     }
     catch (error) {
         console.error(error);
@@ -136,6 +266,14 @@ app.message(async({message, say}) =>{
     } else {
         await say(`Appending to conversationId: ${conversationId}`);
     }
+})
+
+app.action("topic_button", async(slackApp) => {
+    const topic = slackApp.payload.text.text
+    const data = await app.client.search.messages({
+
+    })
+    await slackApp.ack()
 })
 
 app.action("add-todo", async (slackApp)=>{
@@ -236,7 +374,7 @@ app.command("/camcam-stop", async (slackApp)=> {
     const options = {
         token: botToken,
         channel: channelId,
-        text: `Conversation stopped, Id: ${conversationId}`,
+        text: `Conversation stopped, Id: ${conversationId}\n\n${getMeetingLink(conversationId)}`,
     }
     await slackApp.respond(options)
 })
@@ -356,7 +494,7 @@ function getTodoMessages(userId, todoList) {
     const options = {
         token: botToken,
         channel: userId,
-        text: "Your tasks",
+        text: _.isEmpty(todoList)?"Congratulations! You have completed all the tasks": "Your tasks",
         attachments: [],
         as_user: true,
         username: 'manoj mali'
@@ -418,26 +556,57 @@ const sendInsights = async function(channel) {
     let result = {}
     _.map(insights, (obj) => {
         if(!result[obj.type]) result[obj.type]= [];
-        result[obj.type].push(`${obj.text}:|:|:${obj.from && obj.from.userId}`)
+        result[obj.type].push(`${obj.text}:|:|:${obj.from && obj.from.userId}:|:|:${obj.assignee && obj.assignee.name || ''}:|:|:${obj.dueBy? '*Due By*: '+obj.dueBy.split('T')[0] : ''}`)
 
     })
 
     for(let user of channelSubscription[channel]) {
         for (let insight of Object.keys(result)) {
+            const displayDetails = details[insight] || {
+                displayName: insight
+            }
             const options = {
                 token: botToken,
                 text: insight,
                 attachments: [],
+                blocks: [
+                    {type: "divider"},
+                    {
+                        "type": "section",
+                        "text": {
+                            "type": "mrkdwn",
+
+                            "text": `${displayDetails.icon} ${displayDetails.displayName} from channel #camcam-test \n\t  _${displayDetails.note || ''}_`
+                        }
+                    },
+                    {type: "divider"},
+                ],
                 as_user: true,
                 username: 'manoj mali'
             }
 
+            const topicsBlock = {
+                color: '#34cfeb',
+                blocks: []
+            }
+
+            if(insight === 'topic') {
+                options.attachments.push(topicsBlock)
+            }
+
+
             let count = 1;
             for (let insightDetails of result[insight]) {
                 const userId = insightDetails.split(':|:|:')[1]
+                const assignee = insightDetails.split(':|:|:')[2]
                 const messageTs = userId && userId.split('|')[3]
                 const channel = userId && userId.split('|')[1]
-                let textToDisplay = insightDetails.split(':|:|:')[0]
+                let textToDisplay = `${insightDetails.split(':|:|:')[0]}`
+                const fromUser = userId && userId.split('|')[2]
+                const dueBy = insightDetails.split(':|:|:')[3]
+
+
+
                 let permalink
                 if(messageTs && channel) {
                     permalink = await app.client.chat.getPermalink({
@@ -447,6 +616,16 @@ const sendInsights = async function(channel) {
                     })
                     permalink = permalink.permalink
                     textToDisplay = `<${permalink}|${textToDisplay}>`
+                }
+
+                if(!_.isEmpty(assignee)){
+                    textToDisplay += `\n\n *Assignee:* ${assignee}`
+                }
+                if(!_.isEmpty(dueBy)) {
+                    textToDisplay += `\n\n ${dueBy}`
+                }
+                if(insight === 'question' && !_.isEmpty(fromUser)) {
+                    textToDisplay += `\n\n *From*: <@${fromUser}>`
                 }
                 const insightBlock = {
                     color: '#34cfeb',
@@ -466,9 +645,9 @@ const sendInsights = async function(channel) {
                     elements: []
                 }
                 insightBlock.blocks.push(actionBlock)
-                insightBlock.blocks.push({
-                    type: 'divider'
-                })
+                // insightBlock.blocks.push({
+                //     type: 'divider'
+                // })
 
                 if (insight === 'action_item') {
                     actionBlock.elements.push({
@@ -493,13 +672,29 @@ const sendInsights = async function(channel) {
                         value: insightDetails
                     })
                 }
-
-                actionBlock.elements.push({
-                    ...buttons.Ignore,
-                    value: ''+ count
-                })
+                if(insight === 'topic') {
+                       topicsBlock.blocks.push({
+                           type: 'actions',
+                           elements: [{
+                               type: "button",
+                               text: {
+                                   "type": "plain_text",
+                                   "text": insightDetails.split(':|:|:')[0],
+                                   "emoji": true
+                               },
+                               action_id: "topic_button"
+                           }]
+                       })
+                } else {
+                    actionBlock.elements.push({
+                        ...buttons.Ignore,
+                        value: '' + count
+                    })
+                }
                 count++;
-                options.attachments.push(insightBlock)
+                if(insight !== 'topic') {
+                    options.attachments.push(insightBlock)
+                }
 
 
             }
@@ -516,11 +711,11 @@ const buttons = {
         "type": "button",
         "text": {
         "type": "plain_text",
-            "text": "TODO",
+            "text": "ToDo",
             "emoji": true
     },
         "action_id": "add-todo",
-        "style": "primary"
+        // "style": "primary"
     },
     Ignore: {
         "type": "button",
@@ -554,12 +749,36 @@ const buttons = {
         "type": "button",
         "text": {
         "type": "plain_text",
-            "text": "reply",
+            "text": "Reply",
             "emoji": true
         },
 
         "action_id": "reply"
     }
+}
+
+const details = {
+    question: {
+        displayName: 'Questions',
+        icon: ':question:'
+    },
+    topic: {
+        displayName: 'Topics',
+        icon: ':memo:',
+        note: `(upcoming : clicking on topic should take you to respective message thread)`
+    },
+    action_item: {
+        displayName: 'Action Items',
+        icon: ':white_check_mark:'
+    },
+    follow_up: {
+        displayName: 'Follow Ups',
+        icon: ':calendar:'
+    }
+}
+
+const getMeetingLink = function (id) {
+    return `https://meetinginsights.symbl.ai/meeting/#/${btoa(`{"sessionId": "${id}"}`)}`
 }
 // var cron = require('node-cron');
 //

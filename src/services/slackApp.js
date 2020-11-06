@@ -10,15 +10,13 @@ const app = new App(credential);
 app.client.chat.postMessage(
     {
         token: credential.token,
-        channel: 'G018W83JDND',
-    thread_ts: "1596999318.032000",
-
+        channel: 'U0133JW1C23',
     "blocks": [
     {
         "type": "section",
         "text": {
             "type": "mrkdwn",
-            "text": "<@U0133JW1C23> this is reply"
+            "text": "Manoj should submit documents tomorrow"
         }
     },
 
@@ -42,7 +40,7 @@ app.client.chat.postMessage(
                     "text": "TODO",
                     "emoji": true
                 },
-                "action_id": "add-todo",
+                "action_id": "xxxxxx",
                 "style": "primary"
             },
             {
@@ -52,7 +50,7 @@ app.client.chat.postMessage(
                     "text": "Ignore",
                     "emoji": true
                 },
-                "action_id": "delete"
+                "action_id": "add-todo"
                 // "style": "default"
             },
             {
